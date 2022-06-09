@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.6.0/umd/popper.min.js"
+        integrity="sha512-BmM0/BQlqh02wuK5Gz9yrbe7VyIVwOzD1o40yi1IsTjriX/NGF37NyXHfmFzIlMmoSIBXgqDiG1VNU6kB5dBbA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./JQcrud.js" defer></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>API</title>
+</head>
+
+<body class="container bg-dark">
+    <div class="text-center">
+        <h1> MObiles</h1>
+        <button id="addMobile">Add Mobile</button>
+    </div>
+    <div id="mobiles" class="row p-3">
+        <span> Loading.... </span>
+    </div>
+    <!-- Button trigger modal -->
+    <!-- <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#updateModel">
+      Launch
+    </button> -->
+    <!-- New product -->
+    <div class="modal fade" id="newMobileModel" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Mobile details</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <input type="hidden" class="form-control" id="newID" />
+                        <label for="newName">Name</label>
+                        <input type="text" class="form-control" name="newName" id="newName" aria-describedby="helpId"
+                            placeholder="Enter name">
+                    </div>
+                    <div class="form-group">
+                        <label for="newPrice">Price:</label>
+                        <input type="text" class="form-control" name="newPrice" id="newPrice" aria-describedby="helpId"
+                            placeholder="Enter price">
+                    </div>
+                    <div class="form-group">
+                        <label for="newRAM">RAM</label>
+                        <input type="text" class="form-control" name="newRAM" id="newRAM" aria-describedby="helpId"
+                            placeholder="Enter RAM">
+                    </div>
+                    <div class="form-group">
+                        <label for="newROM">ROM</label>
+                        <input type="text" class="form-control" name="newROM" id="newROM" aria-describedby="helpId"
+                            placeholder="Enter ROM">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn newButton btn-success">ADD</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- updation Modal -->
+    <div class="modal fade" id="updateModel" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Update</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <input type="hidden" class="form-control" id="updateID" />
+                        <label for="updateName">Name</label>
+                        <input type="text" class="form-control" name="updateName" id="updateName"
+                            aria-describedby="helpId" placeholder="Enter updated name">
+                    </div>
+                    <div class="form-group">
+                        <label for="updatePrice">Price:</label>
+                        <input type="text" class="form-control" name="updatePrice" id="updatePrice"
+                            aria-describedby="helpId" placeholder="Enter updated price">
+                    </div>
+                    <div class="form-group">
+                        <label for="updatedRAM">RAM</label>
+                        <input type="text" class="form-control" name="updatedRAM" id="updatedRAM"
+                            aria-describedby="helpId" placeholder="Enter updated RAM">
+                    </div>
+                    <div class="form-group">
+                        <label for="updatedROM">ROM</label>
+                        <input type="text" class="form-control" name="updatedROM" id="updatedROM"
+                            aria-describedby="helpId" placeholder="Enter updated ROM">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn updateButton btn-success">Update</button>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+
+</body>
+
+</html>
